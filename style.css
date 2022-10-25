@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Epilogue', sans-serif;
+
+  --hue: 250;
+  --bg-dark: hsl(var(--hue), 22%, 18%);
+  --fc-primary: hsl(var(--hue), 0%, 100%);
+  --fc-secondary: hsl(var(--hue), 50%, 80%);
+  --fc-span: hsl(var(--hue), 100%, 11%);
+
+  font-size: 62.5%;
+  --fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+  --fs-card: clamp(3rem, 0.5rem + 3vw, 4rem);
+}
+
+body {
+  font-family: var(--ff-heading);
+  background: var(--bg-dark);
+  color: var(--fc-primary);
+}
+
+.page {
+  font-size: 1.6rem;
+  max-width: clamp(33rem, 30rem + 60vw, 120rem);
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+header {
+  text-align: center;
+  margin: 10rem 0 8rem;
+
+  animation: topdown 700ms 100ms backwards;
+}
+
+header p {
+  color: var(--fc-secondary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 3.2rem;
+  font-weight: 400;
+
+  margin-bottom: 1.7rem;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: var(--fs-heading);
+  line-height: 4.8rem;
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+
+  padding-bottom: 10rem;
+  animation: downtop 700ms 400ms backwards;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 41.6rem;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: brightness(0.5);
+
+  transition: all 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: brightness(1) saturate(1.2);
+  opacity: 0.8;
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 5.1rem;
+  left: 2.8rem;
+  
+  font-size: var(--fs-card);
+  font-weight: 800;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2.3 rem;
+}
+
+.card h2 span {
+  border-radius: 2rem;
+  background-color: var(--fc-primary);
+  font-weight: 400;
+  font-size: 1.6rem;
+  
+  color: var(--fc-span);
+  padding: 0 1.6rem;
+  height: 3.8rem;
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- AT-RULES ---------- */
+/* ---------- ANIMATION CSS ---------- */
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- GRID ---------- */
+@media screen and (min-width: 740px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  main {
+    grid-template-columns: none;
+    grid-template-areas: "A B B"
+    "C C D";
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+  main div:nth-child(4) {
+    grid-area: D;
+  }
+}
