@@ -24,6 +24,7 @@ body {
   background: var(--bg-dark);
   color: var(--fc-primary);
   font-size: 1.6rem;
+  max-width: 100vw;
 }
 
 .page {
