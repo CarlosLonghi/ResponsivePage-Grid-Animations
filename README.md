@@ -21,5 +21,5 @@ Neste projeto aprendi os seguintes recursos:
     - @media screen() (para criar quebra da página)
 ## 🔗 Link do Projeto
 ### Clique na imagem abaixo para abrir o projeto!
-[![page](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSModCKusy7bToHrB2oGB8YDPmshPYKkVcrZw&usqp=CAU)](https://carloslonghi.github.io/ResponsivePage-Grid-Animations-/)
+[![page](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSModCKusy7bToHrB2oGB8YDPmshPYKkVcrZw&usqp=CAU)](https://carloslonghi.github.io/ResponsivePage-Grid-Animations/)
 
