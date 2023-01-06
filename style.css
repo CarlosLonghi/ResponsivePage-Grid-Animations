@@ -96,7 +96,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2.3rem;
-  animation: rigthslide 0.8s 0.8s ease-in backwards;
 }
 
 .card h2 span {
@@ -112,6 +111,7 @@ main {
 
   display: inline-flex;
   align-items: center;
+  animation: rigthslide 0.8s 0.8s ease-in backwards;
 }
 
 /* ---------- AT-RULES ---------- */
